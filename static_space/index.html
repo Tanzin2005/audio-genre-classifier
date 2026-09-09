@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Classify music genres locally in your browser with a CNN trained on GTZAN.">
+  <title>Audio Genre Classifier</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web@1.23.2/dist/ort.min.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <main>
+    <header><span class="eyebrow">TANZIN JAYANG / AUDIO ML</span><span class="tag">CNN · GTZAN</span></header>
+    <h1>What genre do<br>you hear?</h1>
+    <p class="intro">Upload a music clip to see the model’s genre predictions.</p>
+    <div class="workspace">
+      <section class="upload-panel" aria-labelledby="upload-title">
+        <span class="step">01 / YOUR AUDIO</span>
+        <h2 id="upload-title">Start with a track</h2>
+        <form id="upload-form">
+          <label class="file-label" for="audio-file">Choose a music clip</label>
+          <input id="audio-file" name="file" type="file" accept="audio/*,.wav,.flac,.ogg,.mp3" required aria-describedby="file-help">
+          <p id="file-help" class="muted">WAV, FLAC, OGG or MP3 · up to 40 MB<br>At least 3 seconds. We analyze the first 30.</p>
+          <audio id="player" controls hidden aria-label="Preview your selected audio"></audio>
+          <button id="analyze" type="submit" disabled>Analyze clip</button>
+        </form>
+        <p id="status" role="status">Loading the CNN…</p>
+        <p class="privacy">Your audio stays on this device. Classification runs in your browser.</p>
+      </section>
+      <section class="results-panel" aria-labelledby="results-title" aria-live="polite">
+        <span class="step">02 / MODEL PREDICTION</span>
+        <h2 id="results-title">Listen. Then compare.</h2>
+        <div id="empty"><p>The model chooses among 10 genres, from blues to rock.</p><p class="muted">Music can cross boundaries. Treat the result as a prediction, especially for genres outside this dataset.</p></div>
+        <div id="result" hidden>
+          <p class="muted">Top prediction</p><p id="genre" class="genre"></p>
+          <div id="scores"></div>
+          <p id="duration" class="muted"></p>
+          <p class="muted">Scores show relative model preference; they are not a guarantee of correctness.</p>
+        </div>
+      </section>
+    </div>
+    <footer><span>Log-mel spectrograms → CNN → genre scores</span><a href="https://github.com/Tanzin2005/audio-genre-classifier" target="_blank" rel="noopener noreferrer">View project on GitHub</a></footer>
+  </main>
+</body>
+</html>

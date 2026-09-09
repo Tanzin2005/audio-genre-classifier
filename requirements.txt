@@ -1,0 +1,9 @@
+# Install torch separately (see README) so CPU and Colab GPU use the right wheel.
+numpy==2.3.5
+scikit-learn==1.8.0
+matplotlib==3.10.8
+librosa==1.0.0
+soundfile==0.14.0
+fastapi==0.141.1
+uvicorn==0.52.4
+python-multipart==0.0.32

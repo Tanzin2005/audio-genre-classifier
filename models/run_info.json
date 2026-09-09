@@ -1,0 +1,25 @@
+{
+  "date": "2026-09-09",
+  "python": "3.12.14",
+  "device": "cpu",
+  "seed": 42,
+  "batch_size": 32,
+  "threads": 2,
+  "requested_epochs": 35,
+  "completed_epochs": 35,
+  "early_stopping_patience": 7,
+  "best_epoch": 35,
+  "dataset_url": "https://huggingface.co/datasets/marsyas/gtzan",
+  "dataset_archive_sha256": "b28cc067ff6199bd826f5d1a6931458586d64acae7f44b2e882b7a97af057531",
+  "checkpoint_sha256": "2ccd7b75b1b2010922b0a656d4c29d7c916dd9b08bbfd0657044276439b8f804",
+  "manifest_sha256": "265ce5d8a9715a63808c466ca1cf3cae1a2b994f6bfedc41b45d835b4f07ab92",
+  "versions": {
+    "torch": "2.14.0+cpu",
+    "numpy": "2.3.5",
+    "librosa": "1.0.0",
+    "soundfile": "0.14.0",
+    "scikit-learn": "1.8.0",
+    "matplotlib": "3.10.8",
+    "fastapi": "0.141.1"
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "test_accuracy": 0.817258883248731,
+  "test_macro_f1": 0.8156469324642919,
+  "unit": "recording (mean segment probabilities)",
+  "best_epoch": 35,
+  "best_validation_macro_f1": 0.8664509889921295,
+  "classes": [
+    "blues",
+    "classical",
+    "country",
+    "disco",
+    "hiphop",
+    "jazz",
+    "metal",
+    "pop",
+    "reggae",
+    "rock"
+  ],
+  "recordings": {
+    "train": 630,
+    "validation": 158,
+    "test": 197
+  },
+  "segments": {
+    "train": 6300,
+    "validation": 1580,
+    "test": 1970
+  },
+  "manifest_sha256": "265ce5d8a9715a63808c466ca1cf3cae1a2b994f6bfedc41b45d835b4f07ab92",
+  "classification_report": {
+    "blues": {
+      "precision": 0.7391304347826086,
+      "recall": 0.85,
+      "f1-score": 0.7906976744186046,
+      "support": 20.0
+    },
+    "classical": {
+      "precision": 0.9090909090909091,
+      "recall": 1.0,
+      "f1-score": 0.9523809523809523,
+      "support": 20.0
+    },
+    "country": {
+      "precision": 0.782608695652174,
+      "recall": 0.9,
+      "f1-score": 0.8372093023255814,
+      "support": 20.0
+    },
+    "disco": {
+      "precision": 0.7333333333333333,
+      "recall": 0.55,
+      "f1-score": 0.6285714285714286,
+      "support": 20.0
+    },
+    "hiphop": {
+      "precision": 0.8095238095238095,
+      "recall": 0.8947368421052632,
+      "f1-score": 0.85,
+      "support": 19.0
+    },
+    "jazz": {
+      "precision": 1.0,
+      "recall": 0.9,
+      "f1-score": 0.9473684210526315,
+      "support": 20.0
+    },
+    "metal": {
+      "precision": 1.0,
+      "recall": 0.8947368421052632,
+      "f1-score": 0.9444444444444444,
+      "support": 19.0
+    },
+    "pop": {
+      "precision": 0.6296296296296297,
+      "recall": 0.8947368421052632,
+      "f1-score": 0.7391304347826086,
+      "support": 19.0
+    },
+    "reggae": {
+      "precision": 0.9333333333333333,
+      "recall": 0.7,
+      "f1-score": 0.8,
+      "support": 20.0
+    },
+    "rock": {
+      "precision": 0.75,
+      "recall": 0.6,
+      "f1-score": 0.6666666666666666,
+      "support": 20.0
+    },
+    "accuracy": 0.817258883248731,
+    "macro avg": {
+      "precision": 0.8286650145345797,
+      "recall": 0.8184210526315792,
+      "f1-score": 0.8156469324642919,
+      "support": 197.0
+    },
+    "weighted avg": {
+      "precision": 0.8289027891764594,
+      "recall": 0.817258883248731,
+      "f1-score": 0.8152071655514279,
+      "support": 197.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      17,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      20,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      2,
+      0,
+      18,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      11,
+      3,
+      0,
+      0,
+      3,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      17,
+      0,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      0,
+      18,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      17,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      17,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      2,
+      1,
+      0,
+      0,
+      2,
+      14,
+      0
+    ],
+    [
+      4,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      12
+    ]
+  ],
+  "limitations": [
+    "GTZAN has known label and repetition issues.",
+    "Splits are recording-disjoint, not verified artist-disjoint.",
+    "Scores are not calibrated probabilities of correctness."
+  ]
+}

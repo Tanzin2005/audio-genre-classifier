@@ -2,3 +2,13 @@ data/
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+.venv/
+venv/
+.pytest_cache/
+.env
+.env.*
+!.env.example
+*.zip
+runs/
+*.part
+# models/cnn.pt is deliberately allowed: deployment needs the trained checkpoint.
